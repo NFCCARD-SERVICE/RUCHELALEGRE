@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruchel Alegre - Links</title>
+    
+    <!-- Modern Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #111822;
+            --card-color: #f0f7f8;
+            --text-dark: #0f172a;
+            --text-light: #e0f2fe;
+            --grid-color: rgba(255, 255, 255, 0.05);
+            --hover-shadow: rgba(0, 0, 0, 0.35);
+            
+            /* Theme & Brand Colors */
+            --enc-teal: #40e0d0;
+            --fb-color: #1877F2;
+            --ig-color: #E1306C;
+            --tiktok-color: #111827;
+            --phone-color: #16a34a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 32px 32px;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            width: 100%;
+            background-color: #ffffff;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 20px;
+            font-size: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .top-bar-title {
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .top-bar-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .icon-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #000;
+            font-size: 18px;
+            transition: opacity 0.2s;
+        }
+
+        .icon-btn:hover {
+            opacity: 0.7;
+        }
+
+        /* Hero Banner Upper Section */
+        .hero-banner {
+            width: 100%;
+            height: 440px;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 0%, rgba(17, 24, 34, 0.15) 60%, rgba(17, 24, 34, 0.85) 90%, var(--bg-color) 100%),
+                        url('9175.jpg') center 15% / cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            text-align: center;
+            padding: 20px 20px 15px 20px;
+        }
+
+        .profile-name {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .profile-bio {
+            font-size: 15px;
+            color: #ffffff;
+            margin-bottom: 18px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 12px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Quick Social Icons Row */
+        .social-icons-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-icons-row a {
+            color: var(--text-light);
+            font-size: 24px;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            opacity: 0.95;
+            filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.8));
+        }
+
+        .social-icons-row a:hover {
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+
+        /* Content Container */
+        .container {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 10px 16px 40px 16px;
+        }
+
+        /* Link Card Styling */
+        .link-card {
+            width: 100%;
+            background-color: var(--card-color);
+            color: var(--text-dark);
+            border-radius: 18px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.25s;
+            position: relative;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px var(--hover-shadow);
+        }
+
+        .card-icon {
+            font-size: 26px;
+            width: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 17px;
+            margin-left: 16px;
+            flex-grow: 1;
+        }
+
+        .card-extra {
+            font-size: 18px;
+            color: rgba(0,0,0,0.2);
+        }
+
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px;
+            position: fixed;
+            z-index: 100;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+            bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header Bar -->
+    <header class="top-bar">
+        <div class="top-bar-title">
+            <i class="fa-solid fa-chevron-left"></i>
+            Links
+        </div>
+        <div class="top-bar-actions">
+            <button class="icon-btn" onclick="alert('Settings menu')">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+            <button class="icon-btn" onclick="shareProfile()">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Header Hero Banner with Image Background -->
+    <div class="hero-banner">
+        <h1 class="profile-name">Ruchel Alegre</h1>
+        <p class="profile-bio">Hello! I'm Ruchel, Nice to meet you!</p>
+
+        <div class="social-icons-row">
+            <a href="https://www.instagram.com/ruchelalegre?psln=YmFvODF3bjlnNmZu&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@ruch2399?_r=1&_t=ZS-9ASJYOkGpWc" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/share/1J2VfGiVQ7/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="container">
+        <!-- 1. MISSIONARY GIVING LINK -->
+        <a href="https://www.everynation.org.ph/giving-enc-missionary" target="_blank" class="link-card">
+            <div class="card-icon" style="color: #0284c7;">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+            </div>
+            <span class="card-title">ENC Missionary Giving</span>
+            <div class="card-extra">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+        </a>
+
+        <!-- 2. CONTACT NUMBER -->
+        <a href="tel:09171477707" class="link-card">
+            <div class="card-icon" style="color: var(--phone-color);">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <span class="card-title">0917 147 7707</span>
+        </a>
+
+        <!-- 3. FACEBOOK -->
+        <a href="https://www.facebook.com/share/1J2VfGiVQ7/?mibextid=wwXIfr" target="_blank" class="link-card">
+            <div class="card-icon" style="color: var(--fb-color);">
+                <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <span class="card-title">Ruchel Alegre</span>
+        </a>
+
+        <!-- 4. INSTAGRAM -->
+        <a href="https://www.instagram.com/ruchelalegre?psln=YmFvODF3bjlnNmZu&utm_source=qr" target="_blank" class="link-card">
+            <div class="card-icon" style="color: var(--ig-color);">
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+            <span class="card-title">ruchelalegre</span>
+        </a>
+
+        <!-- 5. TIKTOK -->
+        <a href="https://www.tiktok.com/@ruch2399?_r=1&_t=ZS-9ASJYOkGpWc" target="_blank" class="link-card">
+            <div class="card-icon" style="color: var(--tiktok-color);">
+                <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <span class="card-title">ruch2399</span>
+            <div class="card-extra">
+                <i class="fa-solid fa-sparkles"></i>
+            </div>
+        </a>
+    </div>
+
+    <!-- Toast Element -->
+    <div id="toast">Link copied to clipboard!</div>
+
+    <script>
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Ruchel Alegre - Links',
+                    text: 'Check out my links!',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                showToast("Profile link copied!");
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            toast.innerText = message;
+            toast.className = "show";
+            
+            setTimeout(() => {
+                toast.className = toast.className.replace("show", "");
+            }, 3000);
+        }
+    </script>
+</body>
+  </html>
+  
